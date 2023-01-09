@@ -125,6 +125,7 @@ a {
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	cursor: pointer;
 }
 
 .wrapper-00 {
@@ -200,7 +201,7 @@ a {
 }
 
 .wrapper-03 li:hover {
-	width: 30%;
+	width: 50%;
 	margin: auto;
 	padding: 8px;
 	border: 2px solid ghostwhite;
@@ -223,12 +224,11 @@ span:hover {
 #btn-box:checked + #text-box:after {
 	content: "cleopotato#4644";
 	color: goldenrod;
-	font-size: 16px;
+	font-size: 12px;
 	font-style: italic;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	cursor: pointer;
 }
 
 .wrapper-04 {
