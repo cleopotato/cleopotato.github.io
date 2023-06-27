@@ -1,239 +1,93 @@
 html, body {
-	width: 100%;
-	margin: 0;
-	font-family: 'Source Code Pro', serif;
+	background: #7c4ca4;
 	caret-color: transparent;
-	background: url("src/chicago-watercolor-skyline.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
+	font-family: "Copperplate", fantasy, "Lucida Console", monospace;
+	margin: auto;
+	width: 100%;
 }
 
-/* Desktop View */
-@media (min-width: 1220px) {
-	.wrapper-00 {
-		margin: 15% auto;
-	}
-	.wrapper-01 {
-		width: 40%;
-	}
-	img {
-		width: 70%;
-		padding: 20px;
-	}
-	h1 {
-		font-size: 50px;
-		letter-spacing: -10px;
-	}
-	h3 {
-		font-size: 25px;
-	}
-	.wrapper-02 p {
-		font-size: 16px;
-	}
-	.wrapper-03 span {
-		font-size: 18px;
-	}
-	.wrapper-04 p {
-		font-size: 16px;
-		font-style: normal;
-	}
+.box {
+	position: fixed;		/* or absolute */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-/* Tablet View */
-@media (max-width: 1200px) {
-	.wrapper-00 {
-		margin: 8% auto;
-	}
-	.wrapper-01 {
-		width: 40%;
-	}
-	img {
-		width: 60%;
-		padding: 15px;
-	}
-	h1 {
-		font-size: 40px;
-		letter-spacing: -4px;
-	}
-	h3 {
-		font-size: 22px;
-	}
-	.wrapper-02 p {
-		font-size: 14px;
-	}
-	.wrapper-03 span {
-		font-size: 16px;
-	}
-	.wrapper-04 p {
-		font-style: normal;
-	}
+.card {
+	display: grid;
+	grid-template-rows: 2rem 4rem 4rem 1fr;
+	grid-template-columns: 1fr;
+	width: 400px;
+	height: 500px;
+	border-radius: 35px;
+	background: -moz-linear-gradient(145deg, #8551af, #704494);
+	background: -webkit-linear-gradient(145deg, #8551af, #704494);
+	background: -ms-linear-gradient(145deg, #8551af, #704494);
+	box-shadow:  15px 15px 25px #3e2652,
+             	-15px -15px 25px #ba72f6;
 }
 
-/* Mobile View */ 
-@media (max-width: 900px) {
-	.wrapper-00 {
-		margin: 15% 5%;
-	}
-	.wrapper-01 {
-		width: 50%;
-	}
-	img {
-		width: 60%;
-	}
-	h1 {
-		font-size: 30px;
-	}
-	h3 {
-		font-size: 18px;
-	}
-	.wrapper-02 p {
-		font-size:12px;
-	}
-	.wrapper-03 span {
-		font-size: 14px;
-	}
-	.wrapper-04 p {
-		font-style: normal;
-	}
+.display {
+	margin: auto;
+	grid-row: 2 / 4;			/* Second line to fourth line */
+	grid-column: 1 / -1;	/* First line to last line */
 }
 
-h1 {
-	margin: 0;
+.display img {
+	height: 100%;
+	aspect-ratio: 1 / 1;	/* So that width = height */
+	border-radius: 50%;		/* Creates a circle */
 }
 
-h3 {
-	margin: 0;
+.content {
+	grid-row: 4 / 5;
+	grid-column: 1 / -1;
+	text-align: center;
+}
+
+.content h1 {
 	color: white;
+	font-size: 40px;
 	text-transform: uppercase;
+	margin-bottom: 0;
 }
 
-p {
-	margin: 0;
+#text-00 {
 	color: goldenrod;
-	font-size: 14px;
-	font-style: italic;
+	display: block;
+	font-size: 16px;
 }
 
-a {
-	color: white;
+.content p {
+	font-size: 16px;
+	margin: auto;
+}
+
+.content ul {
+	cursor: pointer;
+	list-style-type: none;
+	padding: 0;
+}
+
+.content li {
+	width: 50%;
+	border: 2px solid white;
+	border-radius: 15px;
+	margin: 4px auto;
+	padding: 5px;
+}
+
+.content a {
 	text-decoration: none;
 }
 
-.container-main {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	cursor: pointer;
+#text-01 {
+	color: white;
+	font-size: 18px;
 }
 
-.wrapper-00 {
-	border: 2px solid black;
-	border-radius: 15px;
-	background: rgba(0, 0, 0, 0.7);
-}
-
-.wrapper-01 {
-	margin: 30px auto;
-	border-style: solid;
-	border-radius: 50%;
-	background: radial-gradient(circle at 50% 25%, black 5%, transparent 1%), 			/* inner tiny dot */
-				radial-gradient(circle at 50% 75%, white 5%, transparent 1%),
-				radial-gradient(circle at 50% 25%, white 27%, transparent 1%) 50% 0,	/* mix*/
-				radial-gradient(circle at 50% 75%, black 27%, transparent 1%) 50% 0,
-				-moz-linear-gradient(left, white 50%, black 50%);
-	background: radial-gradient(circle at 50% 25%, black 5%, transparent 1%), 			/* inner tiny dot */
-				radial-gradient(circle at 50% 75%, white 5%, transparent 1%),
-				radial-gradient(circle at 50% 25%, white 27%, transparent 1%) 50% 0,	/* mix*/
-				radial-gradient(circle at 50% 75%, black 27%, transparent 1%) 50% 0,
-				-webkit-linear-gradient(left, white 50%, black 50%);
-	background: radial-gradient(circle at 50% 25%, black 5%, transparent 1%), 			/* inner tiny dot */
-				radial-gradient(circle at 50% 75%, white 5%, transparent 1%),
-				radial-gradient(circle at 50% 25%, white 27%, transparent 1%) 50% 0,	/* mix*/
-				radial-gradient(circle at 50% 75%, black 27%, transparent 1%) 50% 0,
-				-ms-linear-gradient(left, white 50%, black 50%);
-}
-
-.wrapper-02 span:nth-child(1) {
-	color: darkred;
-}
-.wrapper-02 span:nth-child(2) {
-	color: red;
-}
-.wrapper-02 span:nth-child(3) {
-	color: orange;
-}
-.wrapper-02 span:nth-child(4) {
-	color: yellow;
-}
-.wrapper-02 span:nth-child(5) {
-	color: lightgreen;
-}
-.wrapper-02 span:nth-child(6) {
-	color: green;
-}
-.wrapper-02 span:nth-child(7) {
-	color: lightblue;
-}
-.wrapper-02 span:nth-child(8) {
-	color: blue;
-}
-.wrapper-02 span:nth-child(9) {
-	color: indigo;
-}
-.wrapper-02 span:nth-child(10) {
-	color: violet;
-}
-
-.wrapper-03 {
-	margin-top: 6%;
-}
-.wrapper-03 ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-
-.wrapper-03 li {
-	padding: 10px;
-	color: ghostwhite;
-}
-
-.wrapper-03 li:hover {
-	width: 50%;
-	margin: auto;
-	padding: 8px;
-	border: 2px solid ghostwhite;
-	border-radius: 15px;
-}
-
-span:hover {
-	color: mediumpurple;
-	font-style: italic;
-}
-
-#btn-box {
-	display: none;
-}
-
-#text-box {
-	position: relative;
-}
-
-#btn-box:checked + #text-box:after {
-	content: "cleopotato#4644";
+#text-01:hover {
 	color: goldenrod;
-	font-size: 12px;
-	font-style: italic;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
-.wrapper-04 {
-	margin-top: 8%;
-	margin-bottom: 2%;
 }
 
 #icon-01 {
@@ -252,11 +106,4 @@ span:hover {
 	color: #0b64c3;
 	background: white;
 	border-radius: 15%;
-}
-
-.wrapper-04 i {
-	border-radius: 20px;
-	background: -moz-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-	background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-	background: -ms-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
