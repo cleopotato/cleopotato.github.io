@@ -11,3 +11,6 @@ soft and simplistic realism for its overall effect.
 - Play around with different colors. (I love purple but I'm being to biased!)
 - Make it more interative? Add javascript?
 - Add a toggle for light/dark mode.
+
+**The old website**
+![Image of my own web design](https://github.com/cleopotato/cleopotato.github.io/blob/main/src/web-v1.png)
