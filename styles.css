@@ -1,5 +1,5 @@
 html, body {
-	background: #7c4ca4;
+	background: #cac2d1;
 	caret-color: transparent;
 	font-family: "Copperplate", fantasy, "Lucida Console", monospace;
 	margin: auto;
@@ -20,11 +20,11 @@ html, body {
 	width: 400px;
 	height: 500px;
 	border-radius: 35px;
-	background: -moz-linear-gradient(145deg, #8551af, #704494);
-	background: -webkit-linear-gradient(145deg, #8551af, #704494);
-	background: -ms-linear-gradient(145deg, #8551af, #704494);
-	box-shadow:  15px 15px 25px #3e2652,
-             	-15px -15px 25px #ba72f6;
+	background: -moz-linear-gradient(225deg, #b6afbc,#d8d0e0);
+	background: -webkit-linear-gradient(225deg, #b6afbc,#d8d0e0);
+	background: -ms-linear-gradient(225deg, #b6afbc,#d8d0e0);
+	box-shadow:  -40px 40px 80px #aca5b2,
+             	40px -40px 80px #e8dff0;
 }
 
 .display {
@@ -40,26 +40,24 @@ html, body {
 }
 
 .content {
+	color: black;
 	grid-row: 4 / 5;
 	grid-column: 1 / -1;
 	text-align: center;
 }
 
 .content h1 {
-	color: white;
 	font-size: 40px;
 	text-transform: uppercase;
 	margin-bottom: 0;
 }
 
-#text-00 {
-	color: goldenrod;
-	display: block;
-	font-size: 16px;
+.content span {
+	font-size: 14px;
 }
 
 .content p {
-	font-size: 16px;
+	font-size: 14px;
 	margin: auto;
 }
 
@@ -71,7 +69,7 @@ html, body {
 
 .content li {
 	width: 50%;
-	border: 2px solid white;
+	border: 2px solid black;
 	border-radius: 15px;
 	margin: 4px auto;
 	padding: 5px;
@@ -81,13 +79,13 @@ html, body {
 	text-decoration: none;
 }
 
-#text-01 {
-	color: white;
-	font-size: 18px;
+.content li span {
+	color: black;
 }
 
-#text-01:hover {
-	color: goldenrod;
+.content li span:hover {
+	color: white;
+	font-size: 18px;
 }
 
 #icon-01 {
