@@ -1,50 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>cleopotato.dev</title>
-		<meta charset="UTF-8">
-		<!--Browser instructions on how to control the page's dimensions and scaling-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="styles.css">
-		<script src="https://kit.fontawesome.com/5a9178496c.js" crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<div class="box">
-			<div class="card">
-				<div class="display">
-					<img src="src/dev.jpg" alt="A picture of this website's developer.">
-				</div>
-				<div class="content">
-					<h1>Cleolyn Letona</h1>
-					<span>Developer In Training</span>
-					<br>
-					<span>/* insert inspiring quote here */</span>
-					<ul>
-					<li>
-						<i id="icon-01" class="fa-brands fa-discord"></i>
-						<span onclick="copyText()">cleopotato#4644</span>
-					</li>
-					<li>
-						<i id="icon-02" class="fa-brands fa-github"></i>
-						<a target="_blank" rel="noopenernoreferrer" href="https://github.com/cleopotato">
-						<span>GitHub</span>
-						</a>
-					</li>
-					<li>
-						<i id="icon-03" class="fa-brands fa-linkedin"></i>
-						<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/cleolyn-letona-a220941b4/">
-						<span>LinkedIn</span>
-						</a>
-					</li>
-				</ul>
-				</div>
-			</div>
-		</div>
-		<script>
-			function copyText() {
-				/* Copies text into clipboard */
-				navigator.clipboard.writeText("cleoptato#4644");				
-			}
-		</script>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Design | cleopotato</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="nav-container">
+            <nav class="nav-bar">
+                <div class="nav-logo"><a href="#">cleopotato</a>
+                </div>
+                <ul class="nav-links"> <!--SYNTAX: ul.nav-link>li*3.nav-link>a[href="#"]-->
+                    <li class="nav-link"><a href="#">Home</a></li>
+                    <li class="nav-link"><a href="#">LinkedIn</a></li>
+                    <li class="nav-link"><a href="#">GitHub</a></li>
+                </ul>
+            </nav>
+            <div class="nav-content">
+                <div class="main">
+                    <h2>Hey there 👋! I'm cleopotato 🤩</h2>
+                    <p>
+                        I’m an aspiring programmer with a passion for coding and problem-solving.<br>
+                        On this site, you can check out my projects and follow my journey as I learn<br>
+                        and grow in the world of technology.<br>
+                        <br>
+                        Thanks for stopping by!
+                    </p>
+                    <button>Let's Begin</button>
+                </div>
+                <div class="image-wrapper">
+                    <img src="image.png" alt="Personalized image created using Adobe Express">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>

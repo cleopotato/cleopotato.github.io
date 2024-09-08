@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
+*{
+    font-family: 'Handjet', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    color: white;
+    background-color: #FFFFFF;
+    background-image:
+        radial-gradient(at 0% 0%, #0032A0, transparent 60%),    /*top left*/
+        radial-gradient(at 100% 0%, #FED141, transparent 60%),  /*top right*/
+        radial-gradient(at 0% 100%, #BF0D3E, transparent 60%),  /*bottom left*/
+        radial-gradient(at 100% 100%, #FFFFFF, transparent 60%); /*bottom right*/
+    min-height: 100vh;   
+}
+
+/* main container*/
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+/* main container attributes*/
+.nav-container{
+    display: block;
+    max-width: 72vw; /*Viewport width unit is useful for creating responsive web design because it scales with the size of the viewport.*/
+    margin-top: 15vh;/*Viewport height unit allows you to size elements relative to the height of the browser window. This means your content will gracefully adjust to any device*/
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, .1);
+    padding: 50px;  /*padding from the inside content*/
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.nav-logo{
+    display: inline-block;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+ul.nav-links{
+    margin: 0;
+    float: right;
+    display: flex;
+    list-style: none;
+}
+
+li.nav-link{
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/*container for navbar content*/
+.nav-content{
+    display: flex;  
+    width: 100%;
+}
+
+.main {
+    margin-top: 7vh;
+    display: inline-block;
+    padding: 15px;
+}
+
+.main h2{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.main p{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+button{
+    margin-top: 10px;
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover{
+    border-color: #000;
+    background-color: #000;
+}
+
+.image-wrapper{
+    display: flex;
+    position: relative;
+}
+
+.image-wrapper img{
+    max-width: 500px;
+}
+
+@media screen and (max-width: 1075px){
+    .nav-content{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .nav-logo{
+        font-size: 30px;
+    }
+    li.nav-link{
+        font-size: 13px;
+    }
+    .main h2{
+        font-size: 25px;
+    }
+    .main p{
+        font-size: 22px;
+    }
+    button{
+        font-size: 18px;
+    }
+    .image-wrapper img{
+        max-width: 380px;
+    }
+}
